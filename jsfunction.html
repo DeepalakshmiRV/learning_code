@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Summary</title>
+    <style>
+        div#maincontent {
+            height: 250px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+ 
+<body>
+    <center>
+        <div id="heading">
+            <h2>Booking Summary</h2>
+        </div>
+        <div id="maincontent">
+            <script>
+                //Write the code to display the booking summary
+                
+                function execute(){
+                    let seat = prompt("enter");
+                    let p = seat;
+                    document.write("Total no of seats booked : " + seat + "<br/>" );
+                    if(seat <= 4) document.write(  seat + " festival discount <br/> </br>");
+                    document.write (`5% discount for ticket 1 <br/>
+                    7% dicount for ticket 2 <br/>
+                    9% disccount for ticket 3 <br/>
+                    11% discount for ticket 4 <br/>`);
+                     function calcost(seat){
+                        var value = seat * 9;
+                        document.write("<br/> actual amount : " + value + "<br/>");
+                    }
+                    calcost(seat);
+                    function caldiscount(seat){
+                        if (seat == 1){
+                           let value = (seat*9)-((seat*9) *0.05);
+                           document.write(" after discount payable: $" + value);
+                        }
+                        else if(seat ==2){
+                            let value = (seat*9)-((seat*9) *0.07);
+                           document.write(" after discount payable: $" + value);
+                        }
+                        else if(seat == 3){
+                            let value = (seat*9)-((seat*9) *0.09);
+                           document.write(" after discount payable: $" + value);
+                        }
+                        else{
+                            let value = (seat*9)-((seat*9) *0.11);
+                           document.write(" after discount payable: $" + value);
+                        }
+                    }
+                    caldiscount(seat);
+
+                }
+                document.write("Actual cost per ticket : $9 <br/>");
+                execute();
+                document.write(" <br/>  Thank you");
+                
+
+            </script>
+        </div>
+    </center>
+</body>
+ 
+</html>
